@@ -1,0 +1,29 @@
+<script>
+                    function MSGcriptografar () {
+                        var textoOriginal = document.getElementById("textarea1").value;
+                        var textoValido = textoOriginal.replace(/[A-ZÀ-ÿ\W]/g, '');
+
+
+                        var textoSubstituido = textoValido.replace(/a/g, "ai")
+                                                            .replace(/i/g, "imes")
+                                                            .replace(/e/g, "enter")
+                                                            .replace(/o/g, "ober")
+                                                            .replace(/u/g, "ufat");
+
+                        document.getElementById("textresultado").textContent = textoSubstituido;
+                    }
+
+
+                    function MSGdescriptografar () {
+
+                        var textoOriginal = document.getElementById("textarea1").value;
+                        var textoValido = textoOriginal.replace(/[A-ZÀ-ÿ\W]/g, '');
+
+                        var textoRevertido = textoValido.replace(/ufat/g, "u")
+                                                            .replace(/ober/g, "o")
+                                                            .replace(/enter/g, "e")
+                                                            .replace(/imes/g, "i")
+                                                            .replace(/ai/g, "a");
+
+                        document.getElementById("textresultado").textContent = textoRevertido;
+                         }
